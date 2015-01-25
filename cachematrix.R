@@ -2,15 +2,13 @@
 ## functions do
 ## Write a short comment describing this function
 
-## makeCacheMatrix takes a matrix as its arugment,
-## and stores it in the global environment.
-## Next it computes its inverse and stores that
-## in the global environment.
+## makeCacheMatrix takes a matrix as its arugment.
+## Next it computes its inverse.
 ##
 ## To use this function, create a variable so:
-##   variableName <- makeCacheMatrix(a-matrix)
-## where "a-matrix" is a variable holding the existing matrix
-## to be tested.
+## variableName <- makeCacheMatrix(a-matrix)
+## where "a-matrix" is a variable holding a matrix
+## or function which creates a matrix .
 
 makeCacheMatrix <- function(mtrx = matrix()){
     mx <- mtrx
@@ -31,14 +29,15 @@ makeCacheMatrix <- function(mtrx = matrix()){
 
 ## Write a short comment describing this function
 
-## cacheSolve will take a matrix as its argument,
-## then pass that argument to makeCacheMatrix
-## cacheSolve then compares its argument to the output
-## of makeCacheMatrix$get().
+## cacheSolve will take a matrix as its argument.
+## Then it passes that argument to makeCacheMatrix.
+## cacheSolve will compare this new matrix to its 
+## existing matrix (the output of makeCacheMatrix$get()).
+##
 ## If they are the same, then cacheSolve will return
 ## the output of makeCacheMatrix$getInverse().
 ## If they are different, cacheSolve will invoke
-## makeCacheMatrix with cacheSolve's argument
+## makeCacheMatrix with cacheSolve's argument (the new matrix)
 ## and return the output of makeCacheMatrix$getInverse().
 
 cacheSolve <- function(x, cacheFunction='test'){
