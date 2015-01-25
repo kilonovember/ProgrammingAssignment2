@@ -30,8 +30,7 @@ makeCacheMatrix <- function(mtrx = matrix()){
 ## Write a short comment describing this function
 
 ## cacheSolve will take a matrix as its argument.
-## Then it passes that argument to makeCacheMatrix.
-## cacheSolve will compare this new matrix to its 
+## cacheSolve will compare this new matrix to the 
 ## existing matrix (the output of makeCacheMatrix$get()).
 ##
 ## If they are the same, then cacheSolve will return
