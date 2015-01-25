@@ -13,17 +13,18 @@
 ## to be tested.
 
 makeCacheMatrix <- function(mtrx = matrix()){
-    	
+    mx <- mtrx
+    iMx <- solve(mx)
 		set <- function(g){
-			mtrx <<- g
+			mx <<- g
 		}
 		get <- function() mtrx
 		
-		setInverse <- function(mtrx){
-			iMtrx <<- solve(mtrx)
+		setInverse <- function(mx){
+			iMx <<- solve(mx)
 		}
 		
-		getInverse <- function() iMtrx
+		getInverse <- function() iMx
 		list(set = set, get = get, getInverse = getInverse, setInverse = setInverse)
 }
 
